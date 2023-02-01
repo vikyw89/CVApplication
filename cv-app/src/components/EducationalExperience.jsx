@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styles from './EducationalExperience.module.css'
 import { EducationalExperienceCard } from "./EducationalExperienceCard";
 
@@ -7,7 +8,7 @@ const EducationalExperience = (props) => {
     const {education} = data
 
     const addForm = (e) => {
-        const newEducation = education.concat('')
+        const newEducation = education.concat({})
         setData({...data, education:newEducation})
     }
 

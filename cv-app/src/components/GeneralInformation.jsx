@@ -15,11 +15,15 @@ const GeneralInformation = (props) => {
                 General Information
             </div>
             <form className={styles.form} onChange={changeHandler}>
+                <input id="prefix" name="prefix" placeholder="Prefix..."/>
                 <input id="firstName" name="firstName" placeholder="First name..."/>
                 <input id="middleName" name="middleName" placeholder="Middle name..."/>
                 <input id="lastName" name="lastName" placeholder="Last name..."/>
+                <input id="title" name="title" placeholder="Title / suffix..."/>
                 <input id="email" name="email" type="email" placeholder="Email address..."/>
                 <input id="phone" name="phone" placeholder="Phone number..."/>
+                <label htmlFor="photo">Photo :</label>
+                <input id="photo" name="photo" type="file" placeholder="Photo..."/>
             </form>
         </div>
     )

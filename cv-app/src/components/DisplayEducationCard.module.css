@@ -1,0 +1,12 @@
+.container {
+    outline: 1px solid white;
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "empty date empty date";
+    gap:10px;
+}
+
+.date {
+    grid: date;
+}

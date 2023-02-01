@@ -4,6 +4,7 @@ import { GeneralInformation } from "./GeneralInformation";
 import { EducationalExperience } from "./EducationalExperience";
 import { PracticalExperience } from "./PracticalExperience";
 import { useState } from "react";
+import { DisplayCV } from "./DisplayCV";
 
 const Main = () => {
     const [data, setData] = useState({
@@ -19,7 +20,7 @@ const Main = () => {
                 <PracticalExperience data={data} setData={setData}/>
             </div>
             <div className={styles.display}>
-                
+                <DisplayCV data={data}/>
             </div>
         </div>
     )

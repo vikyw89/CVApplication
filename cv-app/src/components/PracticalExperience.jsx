@@ -7,7 +7,7 @@ const PracticalExperience = (props) => {
     const { practical } = data
 
     const addForm = (e) => {
-        const newPractical = practical.concat('')
+        const newPractical = practical.concat({})
         setData({...data, practical:newPractical})
     }
 
