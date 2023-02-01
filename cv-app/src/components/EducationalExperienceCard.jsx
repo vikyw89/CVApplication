@@ -13,23 +13,30 @@ const EducationalExperienceCard = (props) => {
         setData({...data, education:newEducation})
     }
     
+    const deleteCard = (e) => {
+        e.stopPropagation()
+        const newEducation = [...data.education]
+        newEducation.splice(index,1)
+        setData({...data, education:newEducation})
+    }
+
     return (
         <div className={styles.container}>
             <form className={styles.form} onChange={changeHandler}>
-                <input id="institutionName" name="institutionName" placeholder="Institution name..."/>
-                <input id="location" name="location" placeholder="Location..."/>
-                <input id="subject" name="subject" placeholder="Subject..."/>
-                <input id="degree" name="degree" placeholder="Degree..."/>
+                <input id="institutionName" name="institutionName" placeholder="Institution name..." value={card.institutionName}/>
+                <input id="location" name="location" placeholder="Location..." value={card.location}/>
+                <input id="subject" name="subject" placeholder="Subject..." value={card.subject}/>
+                <input id="degree" name="degree" placeholder="Degree..." value={card.degree}/>
                 <div className={styles.subform}>
                     <label htmlFor="eduStartDate">Start date :</label>
-                    <input id="eduStartDate" name="startDate" type="date" placeholder="Start date..."/>
+                    <input id="eduStartDate" name="eduStartDate" type="date" placeholder="Start date..." value={card.eduStartDate}/>
                 </div>
                 <div className={styles.subform}>
                     <label htmlFor="eduEndDate">End date :</label>
-                    <input id="eduEndDate" name="endDate" type="date" placeholder="End date..."/>
+                    <input id="eduEndDate" name="eduEndDate" type="date" placeholder="End date..." value={card.eduEndDate}/>
                 </div>
             </form>
-            <button type="button" className={styles.delete}>Delete</button>
+            <button type="button" className={styles.delete} onClick={deleteCard}>Delete</button>
         </div>
     )
 }
