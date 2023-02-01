@@ -1,10 +1,19 @@
 import React from "react";
 import styles from './EducationalExperienceCard.module.css'
 
-const EducationalExperienceCard = () => {
+const EducationalExperienceCard = (props) => {
+    const {data, setData} = props
+
+    const changeHandler = (e) => {
+        e.stopPropagation()
+        const formData = new FormData(e.target.form)
+        const formDataObj = Object.fromEntries(formData.entries())
+        setData({...data, education:formDataObj})
+    }
+
     return (
         <div className={styles.container}>
-            <form className={styles.form}>
+            <form className={styles.form} onChange={changeHandler}>
                 <input id="institutionName" name="institutionName" placeholder="Institution name..."/>
                 <input id="location" name="location" placeholder="Location..."/>
                 <input id="subject" name="subject" placeholder="Subject..."/>

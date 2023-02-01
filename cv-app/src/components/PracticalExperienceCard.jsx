@@ -1,10 +1,19 @@
 import React from "react"
 import styles from './PracticalExperienceCard.module.css'
 
-const PracticalExperienceCard = () =>{
+const PracticalExperienceCard = (props) =>{
+    const {data, setData} = props
+
+    const changeHandler = (e) => {
+        e.stopPropagation()
+        const formData = new FormData(e.target.form)
+        const formDataObj = Object.fromEntries(formData.entries())
+        setData({...data, practical:formDataObj})
+    }
+
     return (
         <div className={styles.container}>
-            <form className={styles.form}>
+            <form className={styles.form} onChange={changeHandler}>
                 <input id="companyName" name="companyName" placeholder="Company name..."/>
                 <input id="position" name="position" placeholder="Position..."/>
                 <input id="jobDescription" name="jobDescription" placeholder="Job description..."/>
