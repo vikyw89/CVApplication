@@ -17,7 +17,7 @@ const EducationalExperience = (props) => {
                 Educational Experience
             </div>
             {education.map((card, index)=>{
-               return <EducationalExperienceCard key={index} index={index} {...props}/> 
+               return <EducationalExperienceCard key={index} index={index} card={card} {...props}/> 
             })}
             <button type="button" className={styles.add} onClick={addForm}>Add</button>
         </div>

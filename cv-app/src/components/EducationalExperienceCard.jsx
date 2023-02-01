@@ -2,15 +2,17 @@ import React from "react";
 import styles from './EducationalExperienceCard.module.css'
 
 const EducationalExperienceCard = (props) => {
-    const {data, setData} = props
+    const { data, setData, index, card } = props
 
     const changeHandler = (e) => {
         e.stopPropagation()
         const formData = new FormData(e.target.form)
         const formDataObj = Object.fromEntries(formData.entries())
-        setData({...data, education:formDataObj})
+        const newEducation = [...data.education]
+        newEducation[index] = formDataObj
+        setData({...data, education:newEducation})
     }
-
+    
     return (
         <div className={styles.container}>
             <form className={styles.form} onChange={changeHandler}>
