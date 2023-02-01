@@ -1,0 +1,30 @@
+.container {
+    outline: 1px solid white;
+    padding: 10px;
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+input {
+    background-color: var(--field-bg-color);
+    color: var(--darkreader-neutral-text);
+    width: 100%;
+    font-size: large;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+*:focus {
+    outline: none;
+}
