@@ -23,7 +23,7 @@ const GeneralInformation = (props) => {
                 <input id="email" name="email" type="email" placeholder="Email address..."/>
                 <input id="phone" name="phone" placeholder="Phone number..."/>
                 <label htmlFor="photo">Photo :</label>
-                <input id="photo" name="photo" type="file" placeholder="Photo..."/>
+                <input id="photo" name="photo" type="file" accept="image/*" placeholder="Photo..."/>
             </form>
         </div>
     )

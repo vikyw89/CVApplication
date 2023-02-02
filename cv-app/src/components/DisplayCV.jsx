@@ -10,7 +10,8 @@ const DisplayCV = (props) => {
     const {prefix, firstName, middleName, lastName, title, email, phone, photo} = general
     const showEducation = education.length !== 0
     const showPractical = practical.length !== 0
-    
+    const photoDisplay = photo ? URL.createObjectURL(photo) : ''
+
     return (
         <div className={styles.container}>
             <div>
@@ -23,7 +24,7 @@ const DisplayCV = (props) => {
 
             </div>
             <div>
-                {/* TODO: display photo object <img src={photo}/> */}
+                <img src={photoDisplay}/>
                 <div className={styles.email}>
                     {email}
                 </div>
