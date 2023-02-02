@@ -1,0 +1,18 @@
+.container {
+    /* outline: 1px solid white; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3,1fr);
+    gap:2px;
+    column-gap: 10px;
+    grid-auto-flow: row;
+}
+
+.date {
+    grid-area: 1 / 1 / -1 / 2;
+    outline:1px solid red;
+    align-self: center;
+    text-decoration: solid;
+    font-size:medium;
+}

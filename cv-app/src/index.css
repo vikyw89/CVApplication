@@ -10,6 +10,13 @@
   --darkreader-selection-background: #004daa;
   --darkreader-selection-text: #e8e6e3;
   --field-bg-color:#1e2122;
+
+  /* CV design */
+  --cv-header-bg-color:#004daa;
+  --cv-body-bg-color:#181a1b;
+  --cv-sidebar-bg-color:#454a4d;
+  --cv-body-title-color:rgb(143, 192, 235);
+  --cv-body-text-color:#d8d4cf;
 }
 
 body {

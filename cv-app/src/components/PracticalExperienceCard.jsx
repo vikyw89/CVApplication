@@ -28,11 +28,11 @@ const PracticalExperienceCard = (props) =>{
                 <input id="jobDescription" name="jobDescription" placeholder="Job description..." value={card.jobDescription}/>
                 <div className={styles.subform}>
                     <label htmlFor="pStartDate">Start date :</label>
-                    <input id="pStartDate" name="pStartDate" type="date" placeholder="Start date..." value={card.pStartDate}/>
+                    <input id="pStartDate" name="pStartDate" placeholder="Start date..." value={card.pStartDate}/>
                 </div>
                 <div className={styles.subform}>
                     <label htmlFor="pEndDate">End date :</label>
-                    <input id="pEndDate" name="pEndDate" type="date" placeholder="End date..." value={card.pEndDate}/>
+                    <input id="pEndDate" name="pEndDate" placeholder="End date..." value={card.pEndDate}/>
                 </div>
             </form>
             <button type="button" className={styles.delete} onClick={deleteCard}>Delete</button>

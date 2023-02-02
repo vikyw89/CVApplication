@@ -3,7 +3,7 @@ import styles from './DisplayEducationCard.module.css'
 
 const DisplayEducationCard = (props) => {
     console.log(props)
-    const { institutionName, location, subject, degree, eduEndDate, eduStartDate } = props.card
+    const { institutionName, subject, degree, eduEndDate, eduStartDate } = props.card
     return (
         <div className={styles.container}>
             <div className={styles.date}>
@@ -11,9 +11,6 @@ const DisplayEducationCard = (props) => {
             </div>
             <div className={styles.institutionName}>
                 {institutionName}
-            </div>
-            <div className={styles.location}>
-                {location}
             </div>
             <div className={styles.subject}>
                 {subject}

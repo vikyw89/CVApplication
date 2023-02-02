@@ -1,9 +1,56 @@
+/* WHOLE CSS */
 .container {
+    outline: 1px solid white;
+    width: 100%;
+    aspect-ratio: calc(2480px / 3508px);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    background-color: var(--cv-body-bg-color);
+}
+
+/* HEADER CSS */
+.header {
+    grid-area: 1 / 1 / 2 / -1;
+    background-color: var(--cv-header-bg-color);
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    gap:10px;
+}
+
+.fullName {
+    font-size:xx-large;
+    text-decoration: solid;
+}
+
+.nameTitle {
+    font-size: large;
+}
+
+/* MAIN CSS */
+.main {
+    grid-area: 2 / 1 / -1 / 10;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.title {
+    color: var(--cv-body-title-color);
+    font-size: large;
+}
+
+.practical, .educational {
+}
+
+/* SIDEBAR CSS */
+.sidebar {
+    grid-area: 2 / 10 / -1 / -1;
+    background-color:var(--cv-sidebar-bg-color)
 }
 
 img {
     width: 100%;
-    aspect-ratio: 1;
 }
