@@ -41,14 +41,15 @@
     color: var(--cv-body-title-color);
     font-size: large;
 }
-
 .practical, .educational {
-}
 
+}
 /* SIDEBAR CSS */
 .sidebar {
+    padding: 10px;
     grid-area: 2 / 10 / -1 / -1;
-    background-color:var(--cv-sidebar-bg-color)
+    background-color:var(--cv-sidebar-bg-color);
+    color: var(--cv-sidebar-text-color);
 }
 
 img {

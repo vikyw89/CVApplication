@@ -7,11 +7,12 @@
     gap:2px;
     column-gap: 10px;
     grid-auto-flow: row;
+    border-top: 1px solid var(--darkreader-neutral-text);
+    padding: 10px;
 }
 
 .date {
     grid-area: 1 / 1 / -1 / 2;
-    outline:1px solid red;
     align-self: center;
     text-decoration: solid;
     font-size:medium;

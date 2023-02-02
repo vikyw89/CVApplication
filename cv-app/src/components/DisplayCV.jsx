@@ -24,11 +24,14 @@ const DisplayCV = (props) => {
             </div>
             <div className={styles.sidebar}>
                 <img src={photoDisplay}/>
+                <div className={styles.title}>
+                    Personal Details
+                </div>
                 <div className={styles.email}>
-                    {email}
+                    Email : {email}
                 </div>
                 <div className={styles.phone}>
-                    {phone}
+                    Phone : {phone}
                 </div>
             </div>
             <div className={styles.main}>
